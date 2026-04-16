@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">Eternal Hatred: Glimmers | HATRED Ent.</title>
+    <meta name="description" content="Альбом Eternal Hatred: Glimmers от BloodHunt и HATRED Ent." data-i18n-att="content" data-i18n-meta_description>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { background: black; }
+        :root { --primary-color: #c50000; --secondary-color: #292929; --accent-color: #ff1515; --text-light: #ffffff; --text-dark: #000000; --text-gray: #c5c5c5; --bg-dark: #000000; --bg-light: #ffffff; --gradient-primary: linear-gradient(135deg, #c50000 0%, #ff4444 100%); --gradient-dark: linear-gradient(135deg, #000000 0%, #292929 100%); --shadow: 0 10px 30px rgba(0, 0, 0, 0.3); --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.1); --border-radius: 12px; --transition: all 0.3s ease; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-light); background: linear-gradient(135deg, #000000 0%, #1a0000 50%, #000000 100%); overflow-x: hidden; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .navbar { position: fixed; top: 0; width: 100%; background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(10px); z-index: 1000; padding: 1rem 0; transition: var(--transition); }
+        .navbar.scrolled { background: rgba(0, 0, 0, 0.98); box-shadow: var(--shadow); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Orbitron', monospace; font-size: 1.3rem; font-weight: 800; color: var(--primary-color); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }
+        .logo img { height: 40px; width: auto; filter: brightness(0.8); transition: var(--transition); }
+        .logo:hover img { transform: scale(1.05); }
+        .lang-switch { display: flex; gap: 0.5rem; margin-left: 1rem; }
+        .lang-switch .lang-btn { background: transparent; border: 1px solid var(--primary-color); color: var(--text-light); padding: 0.25rem 0.75rem; border-radius: 4px; cursor: pointer; font-weight: 600; transition: var(--transition); }
+        .lang-switch .lang-btn:hover, .lang-switch .lang-btn.active { background: var(--primary-color); color: white; }
+        .album-section { padding: 120px 0 60px; }
+        .album-container { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+        .album-image img { width: 100%; border-radius: var(--border-radius); box-shadow: var(--shadow); }
+        .album-info { background: rgba(0, 0, 0, 0.6); padding: 2rem; border-radius: var(--border-radius); backdrop-filter: blur(10px); }
+        .album-title { font-family: 'Orbitron', monospace; font-size: 2rem; margin-bottom: 1rem; color: var(--text-light); }
+        .album-artists { font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .album-year { color: var(--text-gray); margin-bottom: 1.5rem; }
+        .album-description { color: var(--text-gray); margin-bottom: 2rem; line-height: 1.7; }
+        .bandlink-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            margin: 0 0 1.8rem 0;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 12px rgba(197, 0, 0, 0.3);
+        }
+        .bandlink-btn i {
+            font-size: 1.1rem;
+        }
+        .bandlink-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(197, 0, 0, 0.5);
+            background: linear-gradient(135deg, #e00000 0%, #ff5555 100%);
+        }
+        .music-player { margin-top: 0; }
+        .footer { background: transparent; text-align: center; padding: 2rem 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 2rem; }
+        .footer-text { color: var(--text-gray); }
+        @media (max-width: 768px) {
+            .album-container { grid-template-columns: 1fr; }
+            .album-title { font-size: 1.5rem; }
+            .album-section { padding: 100px 0 40px; }
+            .bandlink-btn { padding: 10px 22px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                <img src="/image/hat-red.png" alt="Logo">
+                <span data-i18n="logo_text">HATRED Entertainment</span>
+            </a>
+            <div class="lang-switch">
+                <button class="lang-btn" onclick="setLanguage('ru'); return false;">RU</button>
+                <button class="lang-btn" onclick="setLanguage('en'); return false;">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="album-section">
+            <div class="container">
+                <div class="album-container">
+                    <div class="album-image">
+                        <img src="/image/albums/eternal-hatred-glimmers.png" alt="Eternal Hatred: Glimmers">
+                    </div>
+                    <div class="album-info">
+                        <h1 class="album-title" data-i18n="album_title">Eternal Hatred: Glimmers</h1>
+                        <p class="album-artists">
+                            <span data-i18n="album_artists_label">Исполнители:</span>
+                            <a href="https://music.yandex.ru/artist/21677021" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color);">BloodHunt</a>
+                            <span data-i18n="album_and">&</span>
+                            <a href="https://music.yandex.ru/artist/25565423" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color);">HATRED Ent.</a>
+                        </p>
+                        <p class="album-year" data-i18n="album_year">2026</p>
+                        <div class="album-description" data-i18n="album_description">
+                            <p>«Eternal Hatred: Glimmers» — дебютный совместный альбом BloodHunt и HATRED Ent., сочетающий агрессивные ритмы и мелодичные откровения. Погрузитесь в мир, где тьма переплетается со светом.</p>
+                        </div>
+                        <!-- Новая кнопка BandLink под описанием -->
+                        <a href="https://band.link/eternal_hatred_1" class="bandlink-btn" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-external-link-alt"></i> BandLink
+                        </a>
+                        <div class="music-player">
+                            <iframe frameborder="0" allow="clipboard-write" style="border:none; width:100%; max-width:614px; height:556px;" width="614" height="556" src="https://music.yandex.ru/iframe/album/40921563">Слушайте <a href="https://music.yandex.ru/album/40921563">Eternal Hatred: Glimmers</a> на Яндекс Музыке</iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text" data-i18n="footer_text">© 2026 HATRED Entertainment. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        async function loadTranslations(lang) {
+            const response = await fetch(`/music/eternal-hatred-glimmers/lang/${lang}.json`);
+            if (!response.ok) throw new Error('Failed to load translations');
+            return await response.json();
+        }
+
+        function applyTranslations(translations) {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[key]) el.innerHTML = translations[key];
+            });
+            document.querySelectorAll('[data-i18n-att]').forEach(el => {
+                const attr = el.getAttribute('data-i18n-att');
+                const key = el.getAttribute(`data-i18n-${attr}`);
+                if (translations[key]) el.setAttribute(attr, translations[key]);
+            });
+            if (translations.meta_title) document.title = translations.meta_title;
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc && translations.meta_description) metaDesc.setAttribute('content', translations.meta_description);
+        }
+
+        async function setLanguage(lang) {
+            localStorage.setItem('preferredLang', lang);
+            try {
+                const translations = await loadTranslations(lang);
+                applyTranslations(translations);
+                document.documentElement.lang = lang;
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.textContent.toLowerCase() === lang) btn.classList.add('active');
+                });
+            } catch (e) {
+                console.error('Translation error', e);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            const savedLang = localStorage.getItem('preferredLang') || 'ru';
+            await setLanguage(savedLang);
+        });
+
+        window.setLanguage = setLanguage;
+    </script>
+</body>
+</html>
