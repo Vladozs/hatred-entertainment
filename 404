@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="https://www.w3.org/1999/xhtml" xmlns:fb="https://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8" />
+    <meta https-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 • HATRED Entertainment</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/png" href="image/hat-red.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { background: black; }
+
+        :root {
+            --primary-color: #c50000;
+            --secondary-color: #292929;
+            --accent-color: #ff1515;
+            --text-light: #ffffff;
+            --text-dark: #000000;
+            --text-gray: #c5c5c5;
+            --bg-dark: #000000;
+            --bg-light: #ffffff;
+            --gradient-primary: linear-gradient(135deg, #c50000 0%, #ff4444 100%);
+            --gradient-dark: linear-gradient(135deg, #000000 0%, #292929 100%);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background: linear-gradient(135deg, #000000 0%, #1a0000 50%, #000000 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .wrapper {
+            max-width: 900px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 3rem 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .title {
+            font-family: 'Orbitron', monospace;
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--text-light);
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+            margin-bottom: 1rem;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        .subtitle {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            text-shadow: 0 0 24px rgba(197, 0, 0, 0.6), 0 0 8px rgba(197, 0, 0, 0.4);
+            margin-bottom: 1.75rem;
+        }
+
+        .home-btn {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            background: var(--gradient-primary);
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 700;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .home-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(197, 0, 0, 0.35);
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 20px rgba(255, 255, 255, 0.4); }
+            to   { text-shadow: 0 0 30px rgba(255, 255, 255, 0.8); }
+        }
+
+        @media (max-width: 768px) {
+            .title { font-size: 2.2rem; }
+            .subtitle { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <main class="wrapper" role="main">
+        <h1 class="title">404 Страница не найдена</h1>
+        <p class="subtitle" id="subtitleText"></p>
+        <a class="home-btn" href="https://hatred-entertainment.ru/">На главную</a>
+    </main>
+    <script>
+        (function() {
+            var el = document.getElementById('subtitleText');
+            if (!el) return;
+            var variants = ["Even the Devil May Cry...",
+                            "Machine, turn back now...", 
+                            "Let me tell you how much I've come to HATE you since I began to live...", 
+                            "You're a good man, Arthur Morgan...", 
+                            "We hope your rules and wisdom choke you...",
+                            "Sleep, along with my daughter...", 
+                            "Кодзима гений",
+                            "Он никогда не спит... Он говорит, что никогда не умрёт...",
+                            "Silksong завтра...", 
+                            "Kept you waitin', huh?", 
+                            "El Psy Congroo", 
+                            "Jack is back..."];
+            var idx = Math.floor(Math.random() * variants.length);
+            var pick = variants[idx];
+            if (pick && pick.trim().length > 0) {
+                el.textContent = pick;
+            }
+        })();
+    </script>
+</body>
+</html>
+
+

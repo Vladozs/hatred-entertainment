@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url>
+    <loc>https://hatred-entertainment.ru/</loc>
+    <lastmod>2026-03-22T14:30:00+01:00</lastmod>
+    <priority>1.0</priority>
+    <image:image>
+        <image:loc>https://hatred-entertainment.ru/image/hat-red.png</image:loc>
+    </image:image>
+    <image:image>
+        <image:loc>https://hatred-entertainment.ru/image/wreck.png</image:loc>
+    </image:image>
+    <image:image>
+        <image:loc>https://hatred-entertainment.ru/image/evelineRUS.png</image:loc>
+    </image:image>
+    <image:image>
+        <image:loc>https://hatred-entertainment.ru/image/Gravity.png</image:loc>
+    </image:image>
+    <image:image>
+        <image:loc>https://hatred-entertainment.ru/image/vergil.png</image:loc>
+    </image:image>
+    <image:image>
+        <image:loc>https://hatred-entertainment.ru/image/coolman.png</image:loc>
+    </image:image>
+    <image:image>
+        <image:loc>https://hatred-entertainment.ru/image/albums/eternal-hatred-glimmers.png</image:loc>
+    </image:image>
+</url>
+<url>
+    <loc>https://hatred-entertainment.ru/news/</loc>
+    <lastmod>2026-03-22T14:30:00+01:00</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+        <image:loc>https://hatred-entertainment.ru/favicon.ico</image:loc>
+    </image:image>
+</url>
+<url>
+    <loc>https://hatred-entertainment.ru/eternal-hatred/</loc>
+    <lastmod>2026-03-22T14:30:00+01:00</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+        <image:loc>https://hatred-entertainment.ru/favicon.ico</image:loc>
+    </image:image>
+    <image:image>
+        <image:loc>https://hatred-entertainment.ru/image/eternal-hatred/1.png</image:loc>
+    </image:image>
+    <image:image>
+        <image:loc>https://hatred-entertainment.ru/image/eternal-hatred/2.png</image:loc>
+    </image:image>
+    <image:image>
+        <image:loc>https://hatred-entertainment.ru/image/eternal-hatred/3.png</image:loc>
+    </image:image>
+    <image:image>
+        <image:loc>https://hatred-entertainment.ru/image/eternal-hatred/4.png</image:loc>
+    </image:image>
+</url>
+<url>
+    <loc>https://hatred-entertainment.ru/music/eternal-hatred-glimmers/</loc>
+    <lastmod>2026-03-22T14:30:00+01:00</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+        <image:loc>https://hatred-entertainment.ru/image/albums/eternal-hatred-glimmers.png</image:loc>
+    </image:image>
+</url>
+</urlset>

@@ -1,0 +1,10 @@
+Sitemap: https://hatred-entertainment.ru/sitemap.xml
+User-agent: *
+Allow: *https://hatred-entertainment.ru
+Allow: *https://hatred-entertainment.ru/eternal-hatred
+Allow: *https://hatred-entertainment.ru/news
+Allow: *https://hatred-entertainment.ru/news/page/eveline-release-android
+Allow: *https://hatred-entertainment.ru/news/page/wreck-announcement
+Allow: *https://hatred-entertainment.ru/music/eternal-hatred-glimmers
+Disallow: *https://hatred-entertainment.ru/404
+Disallow: *https://hatred-entertainment.ru/news/news.json
