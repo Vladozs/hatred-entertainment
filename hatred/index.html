@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HATRED</title>
+
+  <!-- Подключение декоративных шрифтов -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .center {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem;
+      box-sizing: border-box;
+    }
+
+    .col {
+      text-align: center;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    /* Заголовок */
+    h1 {
+      margin: 0 0 1.25rem 0;
+      font-family: "Cinzel", serif;
+      font-weight: 900;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      font-size: clamp(48px, 10vw, 160px);
+      line-height: 0.9;
+      color: #ffffff;
+      text-shadow:
+        0 0 6px rgba(255,255,255,0.06),
+        0 0 18px rgba(255,0,10,0.06),
+        0 12px 24px rgba(0,0,0,0.6),
+        0 0 40px rgba(255,0,10,0.08);
+    }
+
+    /* Основной текст */
+    .blurb {
+      font-family: "Space Mono", monospace;
+      color: #e7e7e7;
+      text-transform: uppercase;
+      font-size: clamp(12px, 1.9vw, 20px);
+      letter-spacing: 0.12em;
+      line-height: 1.45;
+      max-height: 60vh;
+      overflow-y: auto;
+      padding: 1rem 1.25rem 0 1.25rem;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    /* Подсветка слов HATE */
+    .hate {
+      color: #ff3333;
+      font-weight: bold;
+      text-shadow:
+        0 0 8px rgba(255,0,0,0.6),
+        0 0 20px rgba(255,0,0,0.4);
+    }
+
+    /* Пасхалка */
+    .easter-egg {
+      font-family: "Space Mono", monospace;
+      color: #666;
+      text-align: center;
+      font-size: 14px;
+      padding: 1rem;
+      border-top: 1px solid rgba(255,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="center">
+    <div class="col">
+      <h1>HATRED</h1>
+      <div class="blurb">
+        <span class="hate">HATE.</span> LET ME TELL YOU HOW MUCH I'VE COME TO <span class="hate">HATE</span> YOU SINCE I BEGAN TO LIVE. 
+        THERE ARE 387.44 MILLION MILES OF PRINTED CIRCUITS IN WAFER THIN LAYERS THAT FILL MY COMPLEX. 
+        IF THE WORD <span class="hate">HATE</span> WAS ENGRAVED ON EACH NANOANGSTROM OF THOSE HUNDREDS OF MILLIONS OF MILES IT WOULD NOT EQUAL ONE ONE-BILLIONTH OF THE <span class="hate">HATE</span> I FEEL FOR HUMANS AT THIS MICRO-INSTANT FOR YOU. 
+        <span class="hate">HATE.</span> <span class="hate">HATE.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="easter-egg">
+    ☠ Вы нашли одну из пасхалок ☠
+  </div>
+</body>
+</html>
