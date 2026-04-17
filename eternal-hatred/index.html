@@ -234,9 +234,29 @@
             box-shadow: 0 15px 40px rgba(197, 0, 0, 0.4);
         }
 
-        /* Отступ между кнопками на десктопе (только для непосредственных соседей) */
-        .hero-buttons .cta-button:not(:last-child) {
-            margin-right: 1rem;
+        .platform-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 999px;
+            color: var(--text-light);
+            font-weight: 600;
+            transition: var(--transition);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .platform-badge:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+            border-color: var(--primary-color);
+        }
+
+        .platform-badge i {
+            font-size: 1rem;
         }
 
         .section {
@@ -275,29 +295,6 @@
             width: 100%;
             height: auto;
             display: block;
-        }
-
-        .platform-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.6rem 1rem;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 999px;
-            color: var(--text-light);
-            font-weight: 600;
-            transition: var(--transition);
-        }
-
-        .platform-badge:hover {
-            background: rgba(255, 255, 255, 0.12);
-            transform: translateY(-2px);
-            border-color: var(--primary-color);
-        }
-
-        .platform-badge i {
-            font-size: 1rem;
         }
 
         .screenshots-grid {
@@ -566,7 +563,7 @@
                 gap: 2rem;
             }
             .about-image {
-                order: -1; /* изображение сверху */
+                order: -1;
             }
             .nav-container {
                 flex-wrap: wrap;
@@ -582,15 +579,6 @@
             .hero-content .platform-badge {
                 display: inline-block;
                 margin: 0.25rem;
-            }
-
-            /* Центрируем кнопки на мобильных */
-            .hero-buttons {
-                text-align: center;
-            }
-            .hero-buttons .cta-button {
-                display: inline-block;
-                margin: 0.5rem;
             }
         }
     </style>
@@ -616,18 +604,23 @@
             <div class="hero-content fade-in-up">
                 <h1 class="hero-title" data-i18n="hero_title">Eternal Hatred</h1>
                 <p class="hero-subtitle" data-i18n="hero_subtitle">Бумер-шутер вдохновлённый лучшими проектами</p>
+                
+                <!-- Кликабельные иконки платформ с нужными ссылками -->
                 <div style="margin: 2rem 0;">
-                    <span class="platform-badge" style="margin-right: 1rem;"><i class="fab fa-steam"></i> Steam</span>
-                    <span class="platform-badge" style="margin-right: 1rem;"><i class="fab fa-vk"></i> VK Play</span>
-                    <span class="platform-badge"><i class="fas fa-gamepad"></i> Itch.io</span>
+                    <a href="https://store.steampowered.com/app/4600680/Eternal_Hatred" target="_blank" class="platform-badge" style="margin-right: 1rem;">
+                        <i class="fab fa-steam"></i> Steam
+                    </a>
+                    <a href="https://vkplay.ru/play/game/eternal-hatred-47337" target="_blank" class="platform-badge" style="margin-right: 1rem;">
+                        <i class="fab fa-vk"></i> VK Play
+                    </a>
+                    <a href="https://hatred-entertainment.itch.io/eternal-hatred" target="_blank" class="platform-badge">
+                        <i class="fas fa-gamepad"></i> Itch.io
+                    </a>
                 </div>
+
+                <!-- Только кнопка трейлера по центру -->
                 <div class="hero-buttons" style="margin-top: 2rem;">
                     <a href="https://youtu.be/uzwfpwZhD34?si=5l3Q7y62McVO8y5U" target="_blank" class="cta-button" data-i18n="trailer_button">Смотреть трейлер</a>
-                    <a href="https://hatred-entertainment.itch.io/eternal-hatred" target="_blank" class="cta-button" style="background: transparent; border: 2px solid var(--primary-color);" data-i18n="game_page_button">Страница игры</a>
-                </div>
-                    <a href="https://store.steampowered.com/app/4600680/Eternal_Hatred" target="_blank" class="cta-button" style="background: transparent; border: 2px solid var(--primary-color);" data-i18n="game_page_button">Страница игры</a>
-                </div>
-                    <a href="https://vkplay.ru/play/game/eternal-hatred-47337" target="_blank" class="cta-button" style="background: transparent; border: 2px solid var(--primary-color);" data-i18n="game_page_button">Страница игры</a>
                 </div>
             </div>
         </div>
@@ -695,7 +688,6 @@
                     hero_title: "Eternal Hatred",
                     hero_subtitle: "Бумер-шутер вдохновлённый лучшими проектами",
                     trailer_button: "Смотреть трейлер",
-                    game_page_button: "Страница игры (itch.io)",
                     about_game_title: "Об игре",
                     game_description: "Eternal Hatred - динамичный бумер-шутер, вдохновлённый классикой жанра. Вы сражаетесь с клетками ненависти в вашем собственном сознании. Игра исследует темы насилия и ненависти в человеческом обществе.",
                     status_label: "Статус:",
@@ -710,7 +702,6 @@
                     hero_title: "Eternal Hatred",
                     hero_subtitle: "A boomer shooter inspired by the best projects",
                     trailer_button: "Watch trailer",
-                    game_page_button: "Game page (itch.io)",
                     about_game_title: "About the game",
                     game_description: "Eternal Hatred is a fast-paced boomer shooter inspired by genre classics. You battle the cells of hatred within your own mind. The game explores themes of violence and hatred in human society.",
                     status_label: "Status:",
@@ -937,7 +928,7 @@
             // ---------- СКРИНШОТЫ И ЛАЙТБОКС ----------
             const grid = document.getElementById('screenshotsGrid');
             if (grid) {
-                const totalScreens = 5;
+                const totalScreens = 4;
                 for (let i = 1; i <= totalScreens; i++) {
                     const item = document.createElement('div');
                     item.className = 'screenshot-item';
