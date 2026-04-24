@@ -391,6 +391,48 @@
             .lightbox-next { right: 10px; }
         }
 
+        /* Стили для контейнера виджета Steam */
+        .steam-widget-section {
+            text-align: center;
+        }
+        .steam-widget-container {
+            max-width: 646px;
+            margin: 2rem auto 0;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 16px;
+            padding: 0.25rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            transition: transform 0.2s;
+        }
+        .steam-widget-container:hover {
+            transform: scale(1.01);
+        }
+        .steam-widget-container iframe {
+            display: block;
+            width: 100%;
+            height: 190px;
+            border: none;
+            border-radius: 12px;
+        }
+        .steam-badge-title {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(197, 0, 0, 0.2);
+            backdrop-filter: blur(4px);
+            padding: 0.5rem 1.5rem;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(197,0,0,0.4);
+        }
+        .steam-badge-title i {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
         .footer {
             background: transparent;
             text-align: center;
@@ -580,6 +622,9 @@
                 display: inline-block;
                 margin: 0.25rem;
             }
+            .steam-widget-container iframe {
+                height: 170px; /* чуть уменьшаем высоту на совсем маленьких экранах */
+            }
         }
     </style>
 </head>
@@ -646,6 +691,19 @@
         </div>
     </section>
 
+    <!-- НОВАЯ СЕКЦИЯ: ВИДЖЕТ STEAM -->
+    <section class="section steam-widget-section">
+        <div class="container">
+            <div class="steam-badge-title">
+                <i class="fab fa-steam"></i>
+                <span data-i18n="steam_widget_title">Доступно в Steam</span>
+            </div>
+            <div class="steam-widget-container">
+                <iframe src="https://store.steampowered.com/widget/4600680/" frameborder="0" width="646" height="190" title="Steam виджет Eternal Hatred"></iframe>
+            </div>
+        </div>
+    </section>
+
     <section class="section">
         <div class="container">
             <h2 class="section-title" data-i18n="screenshots_title">Скриншоты</h2>
@@ -682,7 +740,7 @@
 
     <script>
         (function() {
-            // ---------- ПЕРЕВОДЫ ----------
+            // ---------- ПЕРЕВОДЫ (добавили ключ для виджета) ----------
             const translations = {
                 ru: {
                     hero_title: "Eternal Hatred",
@@ -696,7 +754,8 @@
                     platforms: "ПК (Windows)",
                     screenshots_title: "Скриншоты",
                     footer_text: "© 2026 HATRED Entertainment. Все права защищены.",
-                    easter_egg_text: "КОДЗИМА ГЕНИЙ"
+                    easter_egg_text: "КОДЗИМА ГЕНИЙ",
+                    steam_widget_title: "Приобрести в Steam"
                 },
                 en: {
                     hero_title: "Eternal Hatred",
@@ -710,7 +769,8 @@
                     platforms: "PC (Windows)",
                     screenshots_title: "Screenshots",
                     footer_text: "© 2026 HATRED Entertainment. All rights reserved.",
-                    easter_egg_text: "KOJIMA IS GENIUS"
+                    easter_egg_text: "KOJIMA IS GENIUS",
+                    steam_widget_title: "Get it on Steam"
                 }
             };
 
