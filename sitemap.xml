@@ -1,65 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-<url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Главная страница -->
+  <url>
     <loc>https://hatred-entertainment.ru/</loc>
-    <lastmod>2026-03-22T14:30:00+01:00</lastmod>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <image:image>
-        <image:loc>https://hatred-entertainment.ru/image/hat-red.png</image:loc>
-    </image:image>
-    <image:image>
-        <image:loc>https://hatred-entertainment.ru/image/wreck.png</image:loc>
-    </image:image>
-    <image:image>
-        <image:loc>https://hatred-entertainment.ru/image/evelineRUS.png</image:loc>
-    </image:image>
-    <image:image>
-        <image:loc>https://hatred-entertainment.ru/image/Gravity.png</image:loc>
-    </image:image>
-    <image:image>
-        <image:loc>https://hatred-entertainment.ru/image/vergil.png</image:loc>
-    </image:image>
-    <image:image>
-        <image:loc>https://hatred-entertainment.ru/image/coolman.png</image:loc>
-    </image:image>
-    <image:image>
-        <image:loc>https://hatred-entertainment.ru/image/albums/eternal-hatred-glimmers.png</image:loc>
-    </image:image>
-</url>
-<url>
-    <loc>https://hatred-entertainment.ru/news/</loc>
-    <lastmod>2026-03-22T14:30:00+01:00</lastmod>
-    <priority>0.8</priority>
-    <image:image>
-        <image:loc>https://hatred-entertainment.ru/favicon.ico</image:loc>
-    </image:image>
-</url>
-<url>
-    <loc>https://hatred-entertainment.ru/eternal-hatred/</loc>
-    <lastmod>2026-03-22T14:30:00+01:00</lastmod>
-    <priority>0.8</priority>
-    <image:image>
-        <image:loc>https://hatred-entertainment.ru/favicon.ico</image:loc>
-    </image:image>
-    <image:image>
-        <image:loc>https://hatred-entertainment.ru/image/eternal-hatred/1.png</image:loc>
-    </image:image>
-    <image:image>
-        <image:loc>https://hatred-entertainment.ru/image/eternal-hatred/2.png</image:loc>
-    </image:image>
-    <image:image>
-        <image:loc>https://hatred-entertainment.ru/image/eternal-hatred/3.png</image:loc>
-    </image:image>
-    <image:image>
-        <image:loc>https://hatred-entertainment.ru/image/eternal-hatred/4.png</image:loc>
-    </image:image>
-</url>
-<url>
-    <loc>https://hatred-entertainment.ru/music/eternal-hatred-glimmers/</loc>
-    <lastmod>2026-03-22T14:30:00+01:00</lastmod>
-    <priority>0.8</priority>
-    <image:image>
-        <image:loc>https://hatred-entertainment.ru/image/albums/eternal-hatred-glimmers.png</image:loc>
-    </image:image>
-</url>
+  </url>
+
+  <!-- Страница списка новостей -->
+  <url>
+    <loc>https://hatred-entertainment.ru/news.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Новость 1: Перенос WRECK Eternal (обновлена 25.04.2026) -->
+  <url>
+    <loc>https://hatred-entertainment.ru/news/page/wreck-eternal-release-delay.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Новость 2: Анонс WRECK Eternal (выход в феврале 2026) -->
+  <url>
+    <loc>https://hatred-entertainment.ru/news/page/wreck-announcement.html</loc>
+    <lastmod>2025-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Новость 3: Эвелина на Android -->
+  <url>
+    <loc>https://hatred-entertainment.ru/news/page/eveline-release-android.html</loc>
+    <lastmod>2025-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
