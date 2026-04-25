@@ -1516,7 +1516,7 @@
         // Функция загрузки новостей (опционально, не влияет на основной перевод)
         async function loadNews(lang) {
             try {
-                const response = await fetch(`/news/news.${lang}.json`);
+                const response = await fetch(`/news/news.json`);
                 if (!response.ok) throw new Error('No news');
                 const data = await response.json();
                 const list = document.getElementById('news-preview-list');
