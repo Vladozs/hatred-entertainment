@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Eternal Hatred выходит 23 июня 2026 года</title>
-  <meta name="description" content="Релиз Eternal Hatred (ранее WRECK Eternal) состоится 23 июня на Steam, VK Play и itch.io.">
+  <meta name="description" content="Релиз Eternal Hatred (ранее WRECK Eternal) состоится 23 июня на Steam, VK Play и itch.io. Демоверсия в Steam — 10 июня.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -37,9 +37,10 @@
     #related .card .info { padding:10px; }
     #related .card h3 { font-family:Orbitron, monospace; font-size:1.1rem; margin:6px 0; color:var(--text); }
     /* Кнопка на страницу игры */
-    .game-page-button {
+    .game-page-button, .social-button {
       display: inline-block;
       margin-top: 20px;
+      margin-right: 12px;
       padding: 12px 28px;
       background: var(--accent);
       color: white;
@@ -51,9 +52,16 @@
       cursor: pointer;
       font-size: 1rem;
     }
-    .game-page-button:hover {
+    .game-page-button:hover, .social-button:hover {
       background: #ff2a2a;
       transform: translateY(-2px);
+    }
+    .social-buttons {
+      margin: 25px 0 15px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
     }
     /* Виджет Steam */
     .steam-widget-section {
@@ -101,12 +109,20 @@
       <div class="content">
         <div class="text-block">
           <p>Ранее известная как WRECK Eternal, игра Eternal Hatred наконец получает финальную дату релиза. Первый акт выйдет 23 июня 2026 года на платформах Steam, VK Play и itch.io.</p>
+          
+          <p><strong>Публичная демоверсия станет доступна в Steam 10 июня 2026 года.</strong> Вы сможете опробовать геймплей и погрузиться в атмосферу до официального релиза.</p>
+          
           <p>Eternal Hatred — это динамичный инди-шутер, объединяющий эстетику ULTRAKILL и Quake. В центре сюжета — мрачная история о природе человеческой жестокости и попытке заглушить внутреннюю боль в бездне собственного сознания.</p>
-          <p>Мы с нетерпением ждём, когда вы сможете погрузиться в этот жестокий и эмоциональный мир. Следите за новостями — в ближайшее время появится демоверсия.</p>
           
           <div style="text-align:center; margin: 25px 0;">
             <a href="https://hatred-entertainment.ru/eternal-hatred/" class="game-page-button" target="_blank">Подробнее об игре</a>
           </div>
+
+          <div class="social-buttons">
+            <a href="https://t.me/Hatred_Entertainment" class="social-button" target="_blank" rel="noopener"><i class="fab fa-telegram"></i> Telegram</a>
+            <a href="https://vk.com/hatred_entertainment" class="social-button" target="_blank" rel="noopener"><i class="fab fa-vk"></i> VK</a>
+          </div>
+          <p style="text-align:center; color:#aaa;">Подписывайтесь, чтобы следить за выходом демоверсии и новостями разработки.</p>
 
           <!-- Виджет Steam -->
           <section class="steam-widget-section">
