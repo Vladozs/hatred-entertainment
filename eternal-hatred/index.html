@@ -37,6 +37,7 @@
             --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.1);
             --border-radius: 12px;
             --transition: all 0.3s ease;
+            --border-medium: rgba(255, 255, 255, 0.14);
         }
         
         a:link {
@@ -444,6 +445,49 @@
             color: var(--text-gray);
         }
 
+        /* Новые стили для юридических ссылок */
+        .legal-section {
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .legal-links-container {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .legal-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.65rem 1.5rem;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-medium);
+            border-radius: 999px;
+            color: var(--text-gray);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            text-decoration: none;
+            backdrop-filter: blur(4px);
+        }
+        .legal-link i {
+            font-size: 1rem;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+        .legal-link:hover {
+            background: rgba(197, 0, 0, 0.12);
+            border-color: var(--primary-color);
+            color: var(--text-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(197, 0, 0, 0.2);
+        }
+        .legal-link:hover i {
+            color: var(--accent-color);
+        }
+
         .custom-scrollbar {
             position: fixed;
             top: 0;
@@ -623,7 +667,14 @@
                 margin: 0.25rem;
             }
             .steam-widget-container iframe {
-                height: 170px; /* чуть уменьшаем высоту на совсем маленьких экранах */
+                height: 170px;
+            }
+            .legal-links-container {
+                gap: 1rem;
+            }
+            .legal-link {
+                padding: 0.55rem 1.2rem;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -711,6 +762,20 @@
         </div>
     </section>
 
+    <!-- НОВАЯ СЕКЦИЯ: ЮРИДИЧЕСКИЕ ССЫЛКИ -->
+    <section class="legal-section">
+        <div class="container">
+            <div class="legal-links-container">
+                <a href="privacy_policy.html" class="legal-link" data-i18n="privacy_policy_btn">
+                    <i class="fas fa-shield-haltered"></i> Политика конфиденциальности
+                </a>
+                <a href="health_warning.html" class="legal-link" data-i18n="health_warning_btn">
+                    <i class="fas fa-exclamation-triangle"></i> Предупреждение о здоровье
+                </a>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <p class="footer-text" data-i18n="footer_text">© 2026 HATRED Entertainment. Все права защищены.</p>
@@ -740,7 +805,7 @@
 
     <script>
         (function() {
-            // ---------- ПЕРЕВОДЫ (добавили ключ для виджета) ----------
+            // ---------- ПЕРЕВОДЫ (добавлены ключи для юридических ссылок) ----------
             const translations = {
                 ru: {
                     hero_title: "Eternal Hatred",
@@ -755,7 +820,9 @@
                     screenshots_title: "Скриншоты",
                     footer_text: "© 2026 HATRED Entertainment. Все права защищены.",
                     easter_egg_text: "КОДЗИМА ГЕНИЙ",
-                    steam_widget_title: "Приобрести в Steam"
+                    steam_widget_title: "Приобрести в Steam",
+                    privacy_policy_btn: "Политика конфиденциальности",
+                    health_warning_btn: "Предупреждение о здоровье и контенте"
                 },
                 en: {
                     hero_title: "Eternal Hatred",
@@ -770,7 +837,9 @@
                     screenshots_title: "Screenshots",
                     footer_text: "© 2026 HATRED Entertainment. All rights reserved.",
                     easter_egg_text: "KOJIMA IS GENIUS",
-                    steam_widget_title: "Get it on Steam"
+                    steam_widget_title: "Get it on Steam",
+                    privacy_policy_btn: "Privacy Policy",
+                    health_warning_btn: "Health & Content Warning"
                 }
             };
 
