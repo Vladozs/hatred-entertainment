@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal & Health Warning • Eternal Hatred</title>
+    <meta name="description" content="Health and content warnings for Eternal Hatred by HATRED Entertainment.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            background: black;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary-color: #c50000;
+            --secondary-color: #292929;
+            --accent-color: #ff1515;
+            --text-light: #ffffff;
+            --text-dark: #000000;
+            --text-gray: #c5c5c5;
+            --text-muted: #9a9a9a;
+            --bg-dark: #000000;
+            --bg-light: #ffffff;
+            --gradient-primary: linear-gradient(135deg, #c50000 0%, #ff4444 100%);
+            --gradient-dark: linear-gradient(135deg, #000000 0%, #292929 100%);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --shadow-red: 0 8px 32px rgba(197, 0, 0, 0.25);
+            --border-radius: 12px;
+            --border-radius-sm: 8px;
+            --transition: all 0.3s ease;
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-medium: rgba(255, 255, 255, 0.14);
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-bg-hover: rgba(255, 255, 255, 0.06);
+            --warning-amber: #e6a817;
+            --warning-amber-light: #f0c040;
+        }
+
+        a:link,
+        a:visited {
+            color: var(--text-light);
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a.logo:link,
+        a.logo:visited {
+            color: var(--primary-color);
+        }
+        a.logo:hover {
+            color: var(--accent-color);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--text-light);
+            background: linear-gradient(165deg, #000000 0%, #0d0000 30%, #0a0000 60%, #000000 100%);
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* ── Navbar ─────────────────────────── */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            z-index: 1000;
+            padding: 0.85rem 0;
+            transition: var(--transition);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .navbar.scrolled {
+            background: rgba(0, 0, 0, 0.96);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            border-bottom-color: rgba(197, 0, 0, 0.25);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        .logo {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.2rem;
+            font-weight: 800;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: -0.02em;
+        }
+
+        .logo:hover {
+            transform: scale(1.04);
+        }
+
+        .logo img {
+            height: 36px;
+            width: auto;
+            filter: brightness(0.85);
+            transition: var(--transition);
+        }
+
+        .logo:hover img {
+            filter: brightness(1);
+            transform: scale(1.06);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-gray);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            padding: 0.4rem 0.9rem;
+            border-radius: 999px;
+            border: 1px solid var(--border-medium);
+            background: transparent;
+            white-space: nowrap;
+        }
+
+        .nav-back-link:hover {
+            color: var(--text-light);
+            border-color: var(--primary-color);
+            background: rgba(197, 0, 0, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .nav-back-link i {
+            font-size: 0.8rem;
+            transition: var(--transition);
+        }
+
+        .nav-back-link:hover i {
+            transform: translateX(-3px);
+            color: var(--primary-color);
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 0.3rem;
+            margin-left: 0.2rem;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 1px solid var(--border-medium);
+            color: var(--text-gray);
+            padding: 0.3rem 0.7rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.8rem;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .lang-btn:hover {
+            border-color: var(--primary-color);
+            color: var(--text-light);
+        }
+
+        .lang-btn.active {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+        }
+
+        /* ── Page Header ────────────────────── */
+        .page-header {
+            padding-top: 120px;
+            padding-bottom: 2.5rem;
+            text-align: center;
+        }
+
+        .page-header .icon-circle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            background: rgba(230, 168, 23, 0.12);
+            border: 2px solid rgba(230, 168, 23, 0.4);
+            margin-bottom: 1.25rem;
+            transition: var(--transition);
+            animation: subtlePulse 2.5s ease-in-out infinite;
+        }
+
+        @keyframes subtlePulse {
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(230, 168, 23, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 0 14px rgba(230, 168, 23, 0);
+            }
+        }
+
+        .page-header .icon-circle i {
+            font-size: 1.8rem;
+            color: var(--warning-amber);
+        }
+
+        .page-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.6rem;
+            font-weight: 900;
+            color: var(--text-light);
+            letter-spacing: -0.03em;
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+        }
+
+        .page-subtitle {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            letter-spacing: 0.03em;
+        }
+
+        .warning-badge {
+            display: inline-block;
+            margin-top: 0.9rem;
+            background: rgba(230, 168, 23, 0.15);
+            border: 1px solid rgba(230, 168, 23, 0.4);
+            padding: 0.45rem 1.4rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #f0c040;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        /* ── Warning Card ───────────────────── */
+        .warning-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            padding: 2.8rem 3rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .warning-card:hover {
+            border-color: rgba(230, 168, 23, 0.2);
+            box-shadow: 0 8px 32px rgba(230, 168, 23, 0.15);
+        }
+
+        /* ── Section Styling ────────────────── */
+        .warning-section {
+            margin-bottom: 2.8rem;
+        }
+
+        .warning-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-heading {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            letter-spacing: -0.01em;
+        }
+
+        .section-heading .section-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: rgba(230, 168, 23, 0.2);
+            color: var(--warning-amber);
+            font-size: 1rem;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .warning-section p {
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.75;
+        }
+
+        .warning-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .warning-section strong {
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .highlight-warning {
+            color: var(--warning-amber-light);
+            font-weight: 700;
+        }
+
+        /* ── Bullet List ────────────────────── */
+        .warning-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0.75rem 0 1.25rem;
+        }
+
+        .warning-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.85rem;
+            color: var(--text-gray);
+            font-size: 1rem;
+            line-height: 1.7;
+            transition: var(--transition);
+        }
+
+        .warning-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.55rem;
+            width: 8px;
+            height: 8px;
+            border-radius: 2px;
+            background: var(--warning-amber);
+            transform: rotate(45deg);
+            box-shadow: 0 0 10px rgba(230, 168, 23, 0.6);
+            transition: var(--transition);
+        }
+
+        .warning-list li:hover {
+            color: #e8e8e8;
+        }
+
+        .warning-list li:hover::before {
+            background: var(--warning-amber-light);
+            box-shadow: 0 0 16px rgba(240, 192, 64, 0.8);
+            transform: rotate(45deg) scale(1.2);
+        }
+
+        /* ── Health Tip Box ─────────────────── */
+        .health-tip-box {
+            background: rgba(230, 168, 23, 0.05);
+            border: 1px solid rgba(230, 168, 23, 0.2);
+            border-radius: var(--border-radius);
+            padding: 1.4rem 1.8rem;
+            margin-top: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .health-tip-box:hover {
+            background: rgba(230, 168, 23, 0.08);
+            border-color: rgba(230, 168, 23, 0.35);
+            box-shadow: 0 6px 20px rgba(230, 168, 23, 0.12);
+        }
+
+        .health-tip-box .tip-title {
+            font-weight: 700;
+            color: var(--warning-amber-light);
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .health-tip-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .health-tip-box ul li {
+            position: relative;
+            padding-left: 1.6rem;
+            margin-bottom: 0.45rem;
+            color: var(--text-gray);
+            font-size: 0.93rem;
+            line-height: 1.6;
+        }
+
+        .health-tip-box ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--warning-amber-light);
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        /* ── Footer ─────────────────────────── */
+        .footer {
+            background: transparent;
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-subtle);
+            margin-top: 1rem;
+        }
+
+        .footer .footer-text {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            letter-spacing: 0.03em;
+        }
+
+        .footer .footer-text span {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        /* ── Scroll Reveal ──────────────────── */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: all 0.65s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ── Language transition ────────────── */
+        .lang-fade {
+            transition: opacity 0.2s ease;
+        }
+
+        /* ── Responsive ─────────────────────── */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 1.9rem;
+            }
+            .warning-card {
+                padding: 2rem 1.5rem;
+                border-radius: 16px;
+            }
+            .section-heading {
+                font-size: 1.1rem;
+                gap: 0.5rem;
+            }
+            .section-heading .section-icon {
+                width: 30px;
+                height: 30px;
+                font-size: 0.85rem;
+                border-radius: 6px;
+            }
+            .warning-list li {
+                padding-left: 1.5rem;
+                font-size: 0.93rem;
+            }
+            .warning-list li::before {
+                width: 6px;
+                height: 6px;
+                top: 0.5rem;
+            }
+            .nav-container {
+                padding: 0 18px;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.6rem;
+            }
+            .nav-actions {
+                gap: 0.5rem;
+            }
+            .container {
+                padding: 0 18px;
+            }
+            .page-header {
+                padding-top: 110px;
+            }
+            .warning-badge {
+                font-size: 0.78rem;
+                padding: 0.4rem 1rem;
+            }
+            .health-tip-box {
+                padding: 1rem 1.2rem;
+            }
+            .logo span {
+                font-size: 0.9rem;
+            }
+            .logo img {
+                height: 30px;
+            }
+            .nav-back-link {
+                font-size: 0.78rem;
+                padding: 0.35rem 0.7rem;
+            }
+            .lang-btn {
+                font-size: 0.72rem;
+                padding: 0.25rem 0.55rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-title {
+                font-size: 1.5rem;
+            }
+            .warning-card {
+                padding: 1.5rem 1rem;
+                border-radius: 14px;
+            }
+            .section-heading {
+                font-size: 1rem;
+            }
+            .warning-section p {
+                font-size: 0.9rem;
+            }
+            .warning-list li {
+                font-size: 0.88rem;
+                padding-left: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a class="logo" href="index.html">
+                <img src="image/hat-red.png" alt="HATRED Entertainment">
+                <span>HATRED Entertainment</span>
+            </a>
+            <div class="nav-actions">
+                <a href="index.html" class="nav-back-link">
+                    <i class="fas fa-arrow-left"></i> <span data-i18n="back_to_game">Back to Game</span>
+                </a>
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="ru" aria-label="Русский язык">RU</button>
+                    <button class="lang-btn" data-lang="en" aria-label="English language">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="page-header">
+            <div class="container">
+                <div class="icon-circle scroll-reveal">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <h1 class="page-title scroll-reveal" data-i18n="page_title">Health & Content Warning</h1>
+                <p class="page-subtitle scroll-reveal" data-i18n="page_subtitle">Eternal Hatred • HATRED Entertainment</p>
+                <span class="warning-badge scroll-reveal" data-i18n="warning_badge">Read Carefully Before Playing</span>
+            </div>
+        </header>
+
+        <div class="container">
+            <article class="warning-card scroll-reveal" id="warningContent">
+
+                <!-- SECTION 1: Photosensitivity -->
+                <div class="warning-section">
+                    <h2 class="section-heading">
+                        <span class="section-icon"><i class="fas fa-bolt"></i></span>
+                        <span data-i18n="section1_title">Photosensitivity / Epilepsy Warning</span>
+                    </h2>
+                    <p data-i18n="section1_text">
+                        <strong>A very small percentage</strong> of individuals may experience epileptic seizures or blackouts when exposed to certain light patterns or flashing lights. <strong>Eternal Hatred</strong> features intense visual effects, including <span class="highlight-warning">frequent high-contrast flashes</span> during parrying, combat tricks, and explosions.
+                    </p>
+                    <p data-i18n="section1_text2">
+                        If you have an epileptic condition or have had seizures of any kind, <strong>consult your physician before playing</strong>. Immediately stop playing if you experience dizziness, altered vision, or any involuntary movement.
+                    </p>
+                </div>
+
+                <!-- SECTION 2: Content Warning -->
+                <div class="warning-section">
+                    <h2 class="section-heading">
+                        <span class="section-icon"><i class="fas fa-skull"></i></span>
+                        <span data-i18n="section2_title">Content Warning</span>
+                    </h2>
+                    <p data-i18n="section2_text">
+                        This game explores <strong>extremely heavy and sensitive themes</strong>, including:
+                    </p>
+                    <ul class="warning-list" data-i18n="section2_list">
+                        <li>Domestic violence and child abuse.</li>
+                        <li>Alcoholism and its consequences.</li>
+                        <li>Psychological trauma, coma, and depression.</li>
+                    </ul>
+                    <p data-i18n="section2_text2">
+                        The narrative depicts the <strong>internal struggle of a victim</strong> dealing with the physical and emotional aftermath of violence. <span class="highlight-warning">Player discretion is strongly advised.</span>
+                    </p>
+                </div>
+
+                <!-- SECTION 3: Motion Sickness & Well-being -->
+                <div class="warning-section">
+                    <h2 class="section-heading">
+                        <span class="section-icon"><i class="fas fa-head-side-virus"></i></span>
+                        <span data-i18n="section3_title">Motion Sickness & Well-Being</span>
+                    </h2>
+                    <p data-i18n="section3_text">
+                        The fast-paced nature of the gameplay may cause <strong>motion sickness or eye strain</strong>. We strongly recommend the following:
+                    </p>
+                    <div class="health-tip-box">
+                        <div class="tip-title">
+                            <i class="fas fa-heart" style="color: var(--warning-amber-light);"></i>
+                            <span data-i18n="tips_title">Recommendations for comfortable play:</span>
+                        </div>
+                        <ul data-i18n="tips_list">
+                            <li>Take a <strong>15-minute break every hour</strong>.</li>
+                            <li>Play in a <strong>well-lit environment</strong>.</li>
+                            <li>Adjust <strong>"Camera Shake"</strong> or visual settings in the options menu if you feel discomfort.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2026 <span>HATRED Entertainment</span>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            // ── Translations ──────────────────────
+            const translations = {
+                ru: {
+                    back_to_game: "Назад к игре",
+                    page_title: "Предупреждение о здоровье и контенте",
+                    page_subtitle: "Eternal Hatred • HATRED Entertainment",
+                    warning_badge: "Внимательно прочтите перед игрой",
+                    section1_title: "Фотосенситивность / Эпилепсия",
+                    section1_text: "<strong>Небольшой процент людей</strong> может испытывать эпилептические припадки при воздействии определенных световых паттернов или вспышек. <strong>Eternal Hatred</strong> содержит интенсивные визуальные эффекты, включая <span class=\"highlight-warning\">частые высококонтрастные вспышки</span> при парировании, выполнении трюков и взрывах.",
+                    section1_text2: "Если у вас есть эпилептическое состояние, <strong>проконсультируйтесь с врачом перед игрой</strong>. Немедленно прекратите игру, если почувствуете головокружение или нарушение зрения.",
+                    section2_title: "Предупреждение о содержании",
+                    section2_text: "Игра затрагивает <strong>крайне тяжелые и чувствительные темы</strong>:",
+                    section2_list: "<li>Домашнее насилие и жестокое обращение с детьми.</li><li>Алкоголизм и его последствия.</li><li>Психологические травмы, состояние комы и депрессия.</li>",
+                    section2_text2: "Сюжет демонстрирует <strong>внутреннюю борьбу жертвы</strong> с физическими и эмоциональными последствиями насилия. <span class=\"highlight-warning\">Рекомендуется соблюдать осторожность при прохождении.</span>",
+                    section3_title: "Укачивание и самочувствие",
+                    section3_text: "Динамичный геймплей может вызвать симптомы <strong>укачивания (морской болезни)</strong>. Настоятельно рекомендуем:",
+                    tips_title: "Рекомендации для комфортной игры:",
+                    tips_list: "<li>Делайте <strong>перерывы по 15 минут каждый час</strong>.</li><li>Играйте в <strong>хорошо освещенном помещении</strong>.</li><li>Настройте параметр <strong>«Тряска камеры»</strong> в меню, если чувствуете дискомфорт.</li>"
+                },
+                en: {
+                    back_to_game: "Back to Game",
+                    page_title: "Health & Content Warning",
+                    page_subtitle: "Eternal Hatred • HATRED Entertainment",
+                    warning_badge: "Read Carefully Before Playing",
+                    section1_title: "Photosensitivity / Epilepsy Warning",
+                    section1_text: "<strong>A very small percentage</strong> of individuals may experience epileptic seizures or blackouts when exposed to certain light patterns or flashing lights. <strong>Eternal Hatred</strong> features intense visual effects, including <span class=\"highlight-warning\">frequent high-contrast flashes</span> during parrying, combat tricks, and explosions.",
+                    section1_text2: "If you have an epileptic condition or have had seizures of any kind, <strong>consult your physician before playing</strong>. Immediately stop playing if you experience dizziness, altered vision, or any involuntary movement.",
+                    section2_title: "Content Warning",
+                    section2_text: "This game explores <strong>extremely heavy and sensitive themes</strong>, including:",
+                    section2_list: "<li>Domestic violence and child abuse.</li><li>Alcoholism and its consequences.</li><li>Psychological trauma, coma, and depression.</li>",
+                    section2_text2: "The narrative depicts the <strong>internal struggle of a victim</strong> dealing with the physical and emotional aftermath of violence. <span class=\"highlight-warning\">Player discretion is strongly advised.</span>",
+                    section3_title: "Motion Sickness & Well-Being",
+                    section3_text: "The fast-paced nature of the gameplay may cause <strong>motion sickness or eye strain</strong>. We strongly recommend the following:",
+                    tips_title: "Recommendations for comfortable play:",
+                    tips_list: "<li>Take a <strong>15-minute break every hour</strong>.</li><li>Play in a <strong>well-lit environment</strong>.</li><li>Adjust <strong>\"Camera Shake\"</strong> or visual settings in the options menu if you feel discomfort.</li>"
+                }
+            };
+
+            const langButtons = document.querySelectorAll('.lang-btn');
+            const htmlElement = document.documentElement;
+            let currentLang = localStorage.getItem('preferredLang') || 'ru';
+
+            function applyLanguage(lang) {
+                currentLang = lang;
+                const t = translations[lang] || translations.en;
+                htmlElement.lang = lang;
+
+                // Update all elements with data-i18n attribute
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (t[key] !== undefined) {
+                        // For elements that contain HTML (like lists), use innerHTML
+                        if (key === 'section2_list' || key === 'tips_list') {
+                            el.innerHTML = t[key];
+                        } else {
+                            el.innerHTML = t[key];
+                        }
+                    }
+                });
+
+                // Update active button
+                langButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.getAttribute('data-lang') === lang) {
+                        btn.classList.add('active');
+                    }
+                });
+
+                localStorage.setItem('preferredLang', lang);
+            }
+
+            // Language switch event listeners
+            langButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    if (lang && lang !== currentLang) {
+                        applyLanguage(lang);
+                    }
+                });
+            });
+
+            // Apply saved language on load
+            applyLanguage(currentLang);
+
+            // ── Navbar scroll effect ─────────────────
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 60) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // ── Scroll Reveal animation ──────────────
+            const revealElements = document.querySelectorAll('.scroll-reveal');
+            const revealObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // Force reveal for elements above the fold on load
+            window.addEventListener('load', function() {
+                revealElements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        el.classList.add('revealed');
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
